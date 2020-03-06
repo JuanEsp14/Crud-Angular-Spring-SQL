@@ -23,22 +23,22 @@ public class PersonaControlador {
 	@Autowired
 	PersonaService service;
 	
-	@GetMapping("/listar")
+	@GetMapping
 	public List<Persona> getAll(){
 		return service.getAll();
 	}
 	
-	@PostMapping("/save")
+	@PostMapping
 	public Persona save(@RequestBody Persona p){
 		return service.save(p);
 	}
 	
-	@GetMapping("/getId/{id}")
+	@GetMapping("/{id}")
 	public Persona getById(@PathVariable("id") int id){
 		return service.getById(id);
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/{id}")
 	public void delete(@PathVariable("id") int id){
 		Persona p = this.getById(id);
 		if(p != null) {

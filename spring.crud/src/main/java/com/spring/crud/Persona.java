@@ -16,7 +16,7 @@ public class Persona {
 	private int id;
 	
 	@Column
-	private String name;
+	private String nombre;
 	
 	@Column
 	private String apellido;
@@ -29,12 +29,12 @@ public class Persona {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public String getApellido() {

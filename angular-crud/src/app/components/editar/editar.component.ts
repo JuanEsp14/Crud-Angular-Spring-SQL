@@ -18,7 +18,7 @@ export class EditarComponent implements OnInit {
   constructor( private router:Router, private service:PersonaService) { 
     this.forma = new FormGroup({
       'id': new FormControl(),
-      'name' : new FormControl('', [
+      'nombre' : new FormControl('', [
         Validators.required,
         Validators.minLength(3)
       ]),

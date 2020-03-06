@@ -5,10 +5,10 @@
         </div>
         <div class="card-body">
            <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
-               <div lass="form-group row" [ngClass]="{'has-danger': forma.controls.name.invalid}">
-                   <input class="form-control" type="text" placeholder="Nombre:" formControlName="name">
-                   <div class="form-control-feedback" *ngIf="forma.controls.name.errors?.required">El nombre es necesario</div>
-                    <div class="form-control-feedback" *ngIf="forma.controls.name.errors?.minlength">Por lo menos 3 caracteres</div>
+               <div lass="form-group row" [ngClass]="{'has-danger': forma.controls.nombre.invalid}">
+                   <input class="form-control" type="text" placeholder="Nombre:" formControlName="nombre">
+                   <div class="form-control-feedback" *ngIf="forma.controls.nombre.errors?.required">El nombre es necesario</div>
+                    <div class="form-control-feedback" *ngIf="forma.controls.nombre.errors?.minlength">Por lo menos 3 caracteres</div>
                </div>
                <div lass="form-group row" [ngClass]="{'has-danger': forma.controls.apellido.invalid}" style="margin-top: 5px;">
                     <input class="form-control" type="text" placeholder="Apellido:" formControlName="apellido">
