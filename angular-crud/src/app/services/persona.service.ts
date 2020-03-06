@@ -23,4 +23,8 @@ export class PersonaService {
     return this.http.delete<Persona>(this.url+'/save');
   }
 
+  getPersonaID(id: number){
+    return this.http.get<Persona>(this.url+'/getId/'+id);
+  }
+
 }

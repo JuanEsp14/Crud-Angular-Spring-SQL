@@ -19,4 +19,9 @@ export class ListarComponent implements OnInit {
       .subscribe( resp => this.personas = resp );
   }
 
+  editar(p: Persona):void{
+    localStorage.setItem("id", p.id.toString()),
+    this.router.navigate(['editar']);
+  }
+
 }
