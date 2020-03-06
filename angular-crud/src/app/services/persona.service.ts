@@ -20,7 +20,7 @@ export class PersonaService {
   }
 
   delete(p: Persona){
-    return this.http.delete<Persona>(this.url+'/save');
+    return this.http.delete<Persona>(this.url+'/delete/'+p.id);
   }
 
   getPersonaID(id: number){
