@@ -23,9 +23,8 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 
 	@Override
-	public Persona add(Persona p) {
-		// TODO Auto-generated method stub
-		return null;
+	public Persona save(Persona p) {
+		return repo.save(p);
 	}
 
 	@Override

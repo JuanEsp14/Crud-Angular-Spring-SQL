@@ -11,7 +11,7 @@ public interface PersonaService {
 	Persona getById(int id);
 	
 	//Metodo para agregar una persona
-	Persona add(Persona p);
+	Persona save(Persona p);
 	
 	//Metodo para editar una persona
 	Persona edit(Persona p);
