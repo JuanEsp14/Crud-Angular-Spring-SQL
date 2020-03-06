@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +36,14 @@ public class PersonaControlador {
 	@GetMapping("/getId/{id}")
 	public Persona getById(@PathVariable("id") int id){
 		return service.getById(id);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public void delete(@PathVariable("id") int id){
+		Persona p = this.getById(id);
+		if(p != null) {
+			service.delete(p);
+		}		
 	}
 		
 	@Bean

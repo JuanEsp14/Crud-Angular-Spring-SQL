@@ -32,9 +32,8 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 
 	@Override
-	public Persona delete(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void delete(Persona p) {
+		repo.delete(p);
 	}
 
 }

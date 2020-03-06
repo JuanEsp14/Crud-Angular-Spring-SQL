@@ -17,6 +17,6 @@ public interface PersonaService {
 	Persona edit(Persona p);
 		
 	//Metodo para borrar una persona
-	Persona delete(int id);
+	void delete(Persona p);
 
 }
