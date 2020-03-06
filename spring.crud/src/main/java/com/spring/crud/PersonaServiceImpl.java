@@ -18,8 +18,7 @@ public class PersonaServiceImpl implements PersonaService {
 
 	@Override
 	public Persona getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getById(id);
 	}
 
 	@Override
@@ -29,8 +28,7 @@ public class PersonaServiceImpl implements PersonaService {
 
 	@Override
 	public Persona edit(Persona p) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.save(p);
 	}
 
 	@Override
